@@ -24,7 +24,7 @@ Glut
 
 Команда сборки при использовании блокнота [geany](http://www.geany.org/) будет выглятить так:
 ```bash
-gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I%d/include -L%d/lib -lglut32
+gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I"%d/include" -L"%d/lib" -lglut32
 ```
 При использовании других сред разработки, вам нужно будет указать сборщику 
 * Путь к библиотеке ```opengl32.dll```

@@ -1,6 +1,6 @@
 // команда сборки проекта для geany
 // компилятор mingw
-// gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I%d/include -L%d/lib -lglut32
+// gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I"%d/include" -L"%d/lib" -lglut32
 
 #include <GL/gl.h>
 #include "glut.h"
@@ -17,9 +17,14 @@ void reshape(int w, int h)
 	glLoadIdentity();
 }
 
+
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
+	
+	//
+	// ВАШ КОД ЗДЕСЬ
+	//
 	
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
@@ -35,6 +40,9 @@ void display()
 	glVertex2i(550, 400);
 	glEnd();
 	
+	//
+	// КОНЕЦ
+	//
 	glutSwapBuffers();
 }
 
