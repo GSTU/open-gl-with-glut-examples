@@ -1,9 +1,33 @@
-// команда сборки проекта для geany
-// компилятор mingw
-// gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I"%d/include" -L"%d/lib" -lglut32
+/* 
+ *** Компиляция под Windows (компилятор MinGW)
+ * 
+ * Укажите путь к библиотеке glut и укажите ссылку компилятору
+ * gcc -Wall -o "%e" "%f" -lopengl32 -lglu32 -I"%d/include" -L"%d/lib" -lglut32
+ *
+ * 
+ *** Компиляция под linux 
+ * 
+ * установите библиотеки opengl: 
+ *     sudo apt-get install mesa-common-dev
+ * 
+ * Это установит необходимые инструменты для сборки из исходного кода.
+ *     sudo apt-get install build-essential
+ * 
+ * установите freeglut
+ *     sudo apt-get install freeglut3-dev
+ * 
+ * После чего команда сборки будет выглядеть
+ *     gcc -Wall -o "%e" "%f" -lGL -lGLU -lglut
+ * 
+ *** Удачи!
+*/
 
 #include <GL/gl.h>
+// Для widows
 #include "glut.h"
+
+// Для linux
+//#include "GL/glut.h"
 
 typedef struct {
 	int x;
